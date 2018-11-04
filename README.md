@@ -1,6 +1,5 @@
 # Readme
  My desire is to make a beautiful and comfortable wiki.  
-[![Build Status](https://travis-ci.org/eleutherius/Flask-Wiki.svg?branch=master)](https://travis-ci.org/eleutherius/Flask-Wiki)
 ## About
 This project based on alexanderjulo/wiki and guzmanc1/RikiWiki projects.
 ## Features
