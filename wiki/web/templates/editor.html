@@ -1,0 +1,78 @@
+{% extends "base_wide.html" %}
+
+{% block title -%}
+Wiki Редактор
+{%- endblock title %}
+
+
+
+{% block content %}
+
+<ul class="nav nav-tabs" id="MyTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active"  id="editor-tab" data-toggle="tab" href="#editor" role="tab" aria-controls="editor" aria-selected="true">Редактор</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="preview-tab" data-toggle="tab" href="#preview" role="tab" aria-controls="preview" aria-selected="false">Предпросмотр</a>
+  </li>
+</ul>
+<div class="tab-content" id="MyTabContent">
+<div  class="tab-pane fade show active" id="editor" role="tabpanel" aria-labelledby="editor-tab">
+  <form method="post" class="form">
+    {{ form.hidden_tag() }}
+    {{ input(form.title, placeholder="Заголовок", class="col-12", autocomplete="off") }}
+    {{ input(form.body, placeholder="Markdown", class="col-12", rows="20") }}
+    {{ input(form.tags, placeholder="Тег (разделяем запятой)", class="col-12", autocomplete="off") }}
+
+    <div class="form-actions w-100 p-2">
+
+        <div class="float-left" >
+        <a class="btn btn-outline-success my-2 my-sm-0 " href="#preview" id="previewbtn">Предпросмотр</a>
+        </div>
+        <div class="pull-right btn-group float-right" role="group"  aria-label="Basic example">
+        <a class="btn btn-outline-success my-2 my-sm-0" href="{{ url_for('wiki.display', url=page.url) }}">Отменить</a>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Сохранить</button>
+        </div>
+      </div>
+    </form>
+  </div>
+<div class="tab-pane fade" id="preview"></div>
+</div>
+</div>
+
+
+
+{% endblock content %}
+
+
+{% block postscripts -%}
+{{ super() }}
+$('#previewlink').on('click', function() {
+	var $form = $('.form');
+  var $inputs = $form.find('input, textarea, button');
+  var $pre = $('#preview');
+  var bodycontent = 'title: preview\n\n' + $form.find('textarea').val();
+  $inputs.prop('disabled', true);
+  $pre.removeClass('alert').removeClass('alert-error').html("Загрузка...");
+  $.ajax({
+    url: "{{ url_for('wiki.preview') }}",
+    type: "POST",
+    data: { body: bodycontent },
+    success: function(msg) {
+      $pre.html(msg);
+      console.log(msg);
+    },
+    error: function() {
+			$pre.addClass('alert').addClass('alert-error');
+      $pre.html('С предварительным просмотром возникла проблема.');
+    },
+    complete: function() {
+      $inputs.prop('disabled', false);
+    }
+  });
+});
+$('#previewbtn').on('click', function(event) {
+	event.preventDefault();
+	$('#previewlink').click();
+});
+{%- endblock postscripts %}

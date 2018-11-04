@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}
+{% if search %}
+	Результаты для "{{ search }}"
+{% else %}
+	 Поиск
+{% endif %}
+{% endblock title %}
+
+{% block content %}
+<div class="card bg-light" style="width: 30 em;">
+  <div class="card-body">
+    <div class="row">
+	   <div class="col-10 offset1">
+		  <form class="form-inline well" method="POST">
+			  {{ form.hidden_tag() }}
+			  {{ form.term(placeholder='Поиск.. (принято регулярное выражение)', autocomplete="off", class= "col-7") }}
+            {{ form.ignore_case( class="form-check-input  mx-1" ) }} <span >Ignore Case</span>
+			  <input type="submit" class="btn btn-outline-success mx-1 my-sm-0" value="Искать!">
+		  </form>
+  	</div>
+  </div>
+</div>
+</div>
+
+{% if search %}
+	{% if results %}
+		<ul>
+			{% for result in results %}
+				<li><a href="{{ url_for('wiki.display', url=result.url) }}">{{ result.title }}</a></li>
+			{% endfor %}
+		</ul>
+	{% else %}
+		<p>Нет результатов для вашего поиска.</p>
+	{% endif %}
+{% endif %}
+{% endblock content %}

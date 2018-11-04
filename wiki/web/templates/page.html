@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}
+	{{ page.title }}
+{% endblock title %}
+
+{% block content %}
+  <div id="confirmDelete" class="modal hide fade" aria-hidden="true">
+    <div class="modal-header">
+      <h3>Вы уверены?</h3>
+    </div>
+    <div class="modal-body">
+      <p>Вы уверены что хотите удалить {{ page.title }}?  Это не может быть отменено.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#" class="btn" data-dismiss="modal" aria-hidden="true">Нет</a>
+      <a href="{{ url_for('wiki.delete', url=page.url) }}" class="btn btn-danger">Да, удалить.</a>
+    </div>
+  </div>
+	{{ page }}
+{% endblock content %}
+
+{% block sidebar %}
+
+		<div class="btn-group-vertical mb-3 d-flex justify-content-center">
+		  <a  class="btn btn-outline-success " href="{{ url_for('wiki.edit', url=page.url) }}">Изменить</a>
+	  	<a  class="btn btn-outline-success " href="{{ url_for('wiki.move', url=page.url) }}">Перенести</a>
+	  	<a  class="btn btn-outline-success " href="#confirmDelete" data-toggle="modal" class="text-error">Удалить</a>
+		</div>
+
+{% if page.tags %}
+  <ul class="list-group">
+    <li class="list-group-item list-group-item-action flex-column align-items-start active text-center"><h6>Теги</h4></li>
+
+      {% for tag in page.tags.split(',') %}
+        <li class="list-group-item list-group-item-action flex-column align-items-start text-center"><a href="{{ url_for('wiki.tag', name=tag.strip()) }}">{{ tag|trim }}</a></li>
+      {% endfor %}
+  </ul>
+{% endif %}
+
+
+{% endblock sidebar %}

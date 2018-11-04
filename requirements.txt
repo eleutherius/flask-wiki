@@ -1,0 +1,17 @@
+flask
+flask-Testing
+flask-SQLAlchemy
+flask-restful
+flask-script
+flask-marshmallow
+marshmallow-sqlalchemy
+flask-migrate
+mixer
+python-slugify
+markdown
+slugify
+selenium
+xvfbwrapper
+flask_login
+flask_wtf
+Flask-Bootstrap4

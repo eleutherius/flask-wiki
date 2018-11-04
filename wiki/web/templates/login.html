@@ -1,0 +1,20 @@
+{% extends "base_wide.html" %}
+
+{% block title %}Авторизация{% endblock title %}
+
+{% block content %}
+<form class="form-signin" method="POST">
+	<h1 class="h5 mb-3 font-weight-normal text-center">Пожалуйста, войдите</h1>
+	<div class="col-md-4 mx-auto">
+	{{ form.hidden_tag() }}
+	<div class="form-label-group">
+	   {{ form.name(placeholder='Логин', class="form-control") }}
+	</div>
+	<div class="form-label-group">
+	  {{ form.password(placeholder='Пароль', class="form-control", type="password"  ) }}
+	</div>
+	<button class="btn btn-md btn-primary btn-block" type="submit" value="Login">Войти</button>
+</div>
+</form>
+
+{% endblock content %}

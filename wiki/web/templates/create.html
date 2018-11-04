@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Создать новую страницу{% endblock title %}
+{% block content %}
+
+<div class="card bg-light" style="width: 30 em;">
+  <div class="card-body">
+		<form method="POST" class="form-inline offset1" >
+			{{ form.hidden_tag() }}
+			{{ input(form.url, placeholder="URL новой страницы", autocomplete="off") }}
+			<input type="submit" class="btn btn-success btn-sm" value="Создать">
+		</form>
+  </div>
+</div>
+
+
+{% endblock content %}
+
+{% block sidebar %}
+<p class="alert alert-success">Благодарим вас за создание нового контента!</p>
+{% endblock sidebar %}
