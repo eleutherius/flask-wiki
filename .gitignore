@@ -2,3 +2,4 @@
 venv
 flask_wiki.egg-info
 .eggs
+.pytest_cache
