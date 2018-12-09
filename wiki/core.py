@@ -89,8 +89,8 @@ class Processor(object):
             'codehilite',
             'fenced_code',
             'meta',
-            'tables'    
-        ])
+            'tables'
+            ])
         self.input = text
         self.markdown = None
         self.meta_raw = None

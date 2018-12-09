@@ -4,12 +4,12 @@ from setuptools import setup, find_packages
 print(find_packages())
 
 setup(
-    name='wiki2',
-    version='2.0.3',
-    description='simple python markdown wiki with web ui',
-    author='Alexander Jung-Loddenkemper',
-    author_email='alexander@julo.ch',
-    url='https://github.com/alexanderjulo/wiki',
+    name='flask-wiki',
+    version='0.0.3',
+    description='simple python markdown wiki with web UI',
+    author='ALex Lyakhov',
+    author_email='eleutherius69@gmail.com',
+    url='https://github.com/eleutherius/flask-wiki',
     packages=find_packages(),
     include_package_data=True,
     install_requires=[

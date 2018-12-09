@@ -1,0 +1,9 @@
+{
+  "tests/test_core.py::PageTestCase::test_page_loading": true,
+  "tests/test_core.py::PageTestCase::test_page_meta": true,
+  "tests/test_core.py::PageTestCase::test_page_saving": true,
+  "tests/test_core.py::ProcessorTestCase::test_process": true,
+  "tests/test_core.py::ProcessorTestCase::test_process_wikilinks": true,
+  "tests/test_core.py::WikiTestCase::test_index": true,
+  "tests/test_web.py::WebContentTestCase::test_index_missing": true
+}
