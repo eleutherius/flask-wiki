@@ -1,4 +1,4 @@
-#!/Users/smcho/virtualenv/riki/bin/python
+#!/venv/bin/python
 
 # -*- coding: utf-8 -*-
 import os
