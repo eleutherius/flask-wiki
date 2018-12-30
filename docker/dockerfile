@@ -1,0 +1,11 @@
+FROM ubuntu:latest
+MAINTAINER ALex Lyakhov "eleutherius69@gmail.com"
+RUN apt-get update -y
+RUN apt-get install -y python3-pip git python3-dev build-essential wget zip 
+
+RUN wget https://github.com/eleutherius/flask-wiki/archive/master.zip
+RUN unzip master.zip 
+WORKDIR /flask-wiki-master
+RUN pip3 install -r requirements.txt
+ENTRYPOINT ["python3"]
+CMD ["application.py"]

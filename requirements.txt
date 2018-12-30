@@ -26,7 +26,7 @@ python-editor==1.0.3
 python-slugify==1.2.5
 pytz==2018.4
 six==1.11.0
-slugify==0.0.1
+#slugify==0.0.1
 SQLAlchemy==1.2.7
 text-unidecode==1.2
 Unidecode==1.0.22

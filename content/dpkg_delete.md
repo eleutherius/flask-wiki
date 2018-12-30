@@ -3,7 +3,6 @@ tags: #dpkg
 
 удаляем все! 
 
-
 ```shell
 dpkg -l | grep MySQL 
 apt-get remove --purge $MySQL_packets 
