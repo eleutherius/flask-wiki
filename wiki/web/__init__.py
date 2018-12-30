@@ -1,5 +1,4 @@
 import os
-
 from flask import current_app
 from flask import Flask
 from flask import g
