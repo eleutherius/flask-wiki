@@ -1,7 +1,7 @@
 1# Readme
  My desire is to make a beautiful and comfortable wiki.  
 ## About
-This project based on alexanderjulo/wiki and guzmanc1/RikiWiki projects.
+This project based on [alexanderjulo/wiki](https://github.com/alexanderjulo/wiki) and [guzmanc1/RikiWiki](https://github.com/guzmanc1/RikiWiki) projects.
 ## Features
 * Markdown Syntax Editing
 * Tags
