@@ -1,5 +1,10 @@
 # Readme
 [![Build Status](https://travis-ci.org/eleutherius/flask-wiki.svg?branch=master)](https://travis-ci.org/eleutherius/flask-wiki)
+[![BSD license](https://img.shields.io/pypi/l/:packageName.svg)](
+https://github.com/eleutherius/flask-wiki/blob/master/LICENSE)
+[![built with Python3](https://img.shields.io/badge/built%20with-Python3-red.svg)](
+https://www.python.org/)
+
 
  My desire is to make a beautiful and comfortable wiki.  
 ## About
