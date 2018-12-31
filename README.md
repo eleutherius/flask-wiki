@@ -15,7 +15,7 @@ This project based on [alexanderjulo/wiki](https://github.com/alexanderjulo/wiki
 
 Appearance of the application
 ![Home page](https://raw.githubusercontent.com/eleutherius/flask-wiki/master/doc/img1.png)
-![Articles](https://raw.githubusercontent.com/eleutherius/flask-wiki/master/doc/img1.png)
+![Articles](https://raw.githubusercontent.com/eleutherius/flask-wiki/master/doc/img2.png)
 
 ## Features
 * Markdown Syntax Editing
