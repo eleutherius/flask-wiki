@@ -18,18 +18,18 @@ Appearance of the application
 ![Articles](https://raw.githubusercontent.com/eleutherius/flask-wiki/master/doc/img2.png)
 
 ## Features
-* Markdown Syntax Editing
-* Tags
-* Regex Search
-* Random URLs
-* Web Editor
-* Pages can also be edited manually, possible uses are:
-    * use the cli
-    * use your favorite editor
-    * sync with dropbox
-    * and many more
-* Bootstrap 4 like frontend.
-* Python3 compatibility only.
+- [x] Markdown Syntax Editing
+- [x] Tags
+- [x] Regex Search
+- [x] Random URLs
+- [x] Web Editor
+- [x] Pages can also be edited manually, possible uses are:
+	- [x] use the cli
+    - [x] use your favorite editor
+    - [x] sync with dropbox
+    - [x] and many more
+- [x] Bootstrap 4 like frontend.
+- [x] Python3 compatibility only.
 
 ## Roadmap
 
