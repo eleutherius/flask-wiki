@@ -1,14 +1,22 @@
-# Readme
+# Flask-wiki
+----
+
 [![Build Status](https://travis-ci.org/eleutherius/flask-wiki.svg?branch=master)](https://travis-ci.org/eleutherius/flask-wiki)
-[![BSD license](https://img.shields.io/pypi/l/:packageName.svg)](
+[![BSD license](https://img.shields.io/pypi/l/flask.svg)](
 https://github.com/eleutherius/flask-wiki/blob/master/LICENSE)
 [![built with Python3](https://img.shields.io/badge/built%20with-Python3-red.svg)](
 https://www.python.org/)
 
 
- My desire is to make a beautiful and comfortable wiki.  
+My desire is to make a beautiful and comfortable wiki.  
+
 ## About
 This project based on [alexanderjulo/wiki](https://github.com/alexanderjulo/wiki) and [guzmanc1/RikiWiki](https://github.com/guzmanc1/RikiWiki) projects.
+
+Appearance of the application
+![Home page](https://github.com/eleutherius/raw/master/img1.png)
+![Articles](https://github.com/eleutherius/raw/master/img2.png)
+
 ## Features
 * Markdown Syntax Editing
 * Tags
@@ -16,19 +24,22 @@ This project based on [alexanderjulo/wiki](https://github.com/alexanderjulo/wiki
 * Random URLs
 * Web Editor
 * Pages can also be edited manually, possible uses are:
-	* use the cli
-	* use your favorite editor
-	* sync with dropbox
-	* and many more
-* Bootstrap4 like frontend.
+    * use the cli
+    * use your favorite editor
+    * sync with dropbox
+    * and many more
+* Bootstrap 4 like frontend.
 * Python3 compatibility only.
-### Planned
-* Re-introduce support for customizing the theme
-* Speed Improvements
-	* Code Optimizations
-	* Caching
-* Settings via the webinterface
-* Improved  embed marcdown editor
+
+### Roadmap
+
+- [ ]  Re-introduce support for customizing the theme
+- [ ]  Speed Improvements
+	- [ ] Code Optimizations
+	- [ ] Add databases support
+- [ ] Settings via the web interface
+- [ ] Improved  embed markdown editor
+
 ## Demo
 You can used Demo of RikiWiki project.
 You can access the wiki [http://wiki440.ms2ms.com](http://wiki440.ms2ms.com). login:name, pass:1234.
@@ -45,4 +56,4 @@ You can access the wiki [http://wiki440.ms2ms.com](http://wiki440.ms2ms.com). lo
 ## Usage
 I use this wiki as working notes for myself.
 ## Development & Contributors
- Fork me! 
+ Fork me!
