@@ -85,12 +85,7 @@ class Processor(object):
 
             :param str text: the text to process
         """
-        self.md = markdown.Markdown([
-            'codehilite',
-            'fenced_code',
-            'meta',
-            'tables'
-            ])
+        self.md = markdown.Markdown()
         self.input = text
         self.markdown = None
         self.meta_raw = None
@@ -135,10 +130,6 @@ class Processor(object):
         self.meta = OrderedDict()
         for line in self.meta_raw.split('\n'):
             key = line.split(':', 1)[0]
-            # markdown metadata always returns a list of lines, we will
-            # reverse that here
-            self.meta[key.lower()] = \
-                '\n'.join(self.md.Meta[key.lower()])
 
     def process_post(self):
         """
@@ -251,7 +242,6 @@ class Wiki(object):
 
     def get(self, url):
         path = self.path(url)
-        #path = os.path.join(self.root, url + '.md')
         if self.exists(url):
             return Page(path, url)
         return None

@@ -1,6 +1,9 @@
-version: '3'
+version: '3.9'
 services:
   web:
     build: .
+    command:  bash -c 'pip install -e .; wiki web'
+    volumes:
+      - ../:/app
     ports:
      - "5000:5000"

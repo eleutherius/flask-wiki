@@ -12,5 +12,5 @@ docker-compose up -d --force-recreate
 ```
 For rebuild docker container
 ```
-docker-compose --build
+docker-compose build
 ```

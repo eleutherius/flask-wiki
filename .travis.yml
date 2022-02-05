@@ -1,8 +1,6 @@
 language: python
 python:
-  - "3.4"
-  - "3.5"
-  - "3.6"
+  - "3.10"
 # command to install dependencies
 install: "pip install --upgrade pip setuptools wheel && python setup.py develop"
 # command to run tests

@@ -36,4 +36,4 @@ def web(ctx, debug):
             mode.
     """
     app = create_app(ctx.meta['directory'])
-    app.run(debug=debug)
+    app.run(host='0.0.0.0', debug=debug)
