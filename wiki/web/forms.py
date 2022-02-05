@@ -4,7 +4,7 @@
 """
 from flask_wtf import FlaskForm as Form
 from wtforms import BooleanField
-from wtforms import TextField
+from wtforms import StringField as TextField
 from wtforms import TextAreaField
 from wtforms import PasswordField
 from wtforms.validators import InputRequired

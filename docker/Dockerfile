@@ -1,14 +1,8 @@
-FROM ubuntu:18.04 
+FROM python:3.10.2
 MAINTAINER ALex Lyakhov "eleutherius69@gmail.com"
 RUN apt-get update && apt-get upgrade && \
-apt-get install -y --no-install-recommends apt-utils && \
-apt-get install -y python3-pip git python3-dev build-essential wget \
-zip && \
-wget https://github.com/eleutherius/flask-wiki/archive/master.zip && \
-unzip master.zip && rm master.zip
-
-WORKDIR /flask-wiki-master
-RUN pip3 install --no-cache-dir -r requirements.txt
-
-ENTRYPOINT ["python3"]
-CMD ["application.py"]
+apt-get install -y --no-install-recommends 
+WORKDIR /app
+COPY requirements.txt requirements.txt
+RUN /usr/local/bin/python -m pip install --upgrade pip ; \
+/usr/local/bin/python -m pip install -I setuptools==45  importlib-metadata==4.4
